@@ -223,9 +223,7 @@ class bot():
                 movimiento=rand.randint(0,len(moves)-1)
                 bord.movimiento(2,moves[movimiento])
                 results[movimiento]=results[movimiento]+self.randomMove(bord)
-            print("results:",results)
-            print("chosen:",moves[results.index(max(results))])
-            return results.index(max(results))
+            return moves[results.index(max(results))]
 
 #### print("Bienvenido a Mancala")
 print("Elija su dificultad:")
@@ -254,3 +252,4 @@ ganador=tablero.checkWinner()
 print("Tablero de puntos:")
 tablero.imprimir()
 print("Ganador: Jugador",ganador)
+input()
